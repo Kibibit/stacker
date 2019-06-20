@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/Kibibit/announce-it" target="blank"><img src="http://kibibit.io/kibibit-assets/stacker.png" width="150" ></a>
+  <a href="https://github.com/kibibit/stacker" target="blank"><img src="http://kibibit.io/kibibit-assets/stacker.png" width="150" ></a>
   <h2 align="center">
     @kibibit/stacker
   </h2>
@@ -31,4 +31,9 @@
 
 Install this package as a dev dependency:
 ```shell
-npm install --save-dev @kibibit/announce-it
+npm install --save-dev @kibibit/stacker
+```
+
+## How to use
+
+Run the command from the root folder of your project
