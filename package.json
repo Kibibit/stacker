@@ -1,6 +1,6 @@
 {
-  "name": "@kibibibit/stacker",
-  "version": "1.0.0",
+  "name": "@kibibit/stacker",
+  "version": "1.0.0-next.1",
   "description": "creates a stack for your repository with everything you need for a stack page",
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
@@ -8,7 +8,19 @@
     "/lib"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "build": "tsc",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "lint:fix": "tslint --project tsconfig.json -c tslint.json --fix src/**/*.ts",
+    "lint": "tslint --project tsconfig.json -c tslint.json src/**/*.ts",
+    "semantic-release": "semantic-release",
+    "start": "node ./lib/announce-it-cli",
+    "test:watch": "jest --watchAll --coverage",
+    "test": "jest --coverage"
+  },
+  "bin": {
+    "stacker": "bin/extract-stack.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +39,7 @@
     "fs-extra": "^8.0.1",
     "handlebars": "^4.1.2",
     "lodash": "^4.17.11",
+    "manakin": "^0.5.2",
     "simple-icons": "^1.9.28",
     "string-similarity": "^3.0.0",
     "winston": "^3.2.1"
@@ -51,5 +64,32 @@
     "ts-node": "^8.3.0",
     "tslint": "^5.17.0",
     "typescript": "^3.5.2"
+  },
+  "release": {
+    "branches": [
+      "master",
+      {
+        "name": "next",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
+  "jest-stare": {
+    "resultDir": "test-results/",
+    "coverageLink": "../coverage/index.html"
   }
 }
