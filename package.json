@@ -19,6 +19,9 @@
     "test:watch": "jest --watchAll --coverage",
     "test": "jest --coverage"
   },
+  "bin": {
+    "stacker": "bin/extract-stack.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kibibit/stacker.git"
@@ -36,6 +39,7 @@
     "fs-extra": "^8.0.1",
     "handlebars": "^4.1.2",
     "lodash": "^4.17.11",
+    "manakin": "^0.5.2",
     "simple-icons": "^1.9.28",
     "string-similarity": "^3.0.0",
     "winston": "^3.2.1"
