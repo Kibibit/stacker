@@ -7,14 +7,14 @@ node_js:
   - "8.3"
 notifications:
   email: false
-script:
-  - npm run test
-stages:
-  # - compile
-  - test
-  - deploy
 jobs:
   include:
+    - stage: test
+      node_js: lts/*
+      script:
+        - npm run build
+        - npm run test
+        - npm run coveralls
     - stage: release
       node_js: lts/*
       script:
