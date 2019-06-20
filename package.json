@@ -1,6 +1,6 @@
 {
   "name": "@kibibit/stacker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "creates a stack for your repository with everything you need for a stack page",
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
