@@ -63,3 +63,4 @@ typings/
 lib/
 project-stack.*
 package-lock.json
+test-results/
