@@ -1,0 +1,52 @@
+{
+  "name": "@kibibibit/stacker",
+  "version": "1.0.0",
+  "description": "creates a stack for your repository with everything you need for a stack page",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kibibit/stacker.git"
+  },
+  "author": "neilkalman@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kibibit/stacker/issues"
+  },
+  "homepage": "https://github.com/Kibibit/stacker#readme",
+  "dependencies": {
+    "@kibibit/logos": "github:kibibit/logos#master",
+    "devicon": "^2.2.0",
+    "extract-domain": "^2.2.1",
+    "fs-extra": "^8.0.1",
+    "handlebars": "^4.1.2",
+    "lodash": "^4.17.11",
+    "simple-icons": "^1.9.28",
+    "string-similarity": "^3.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.1.0-beta.3",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "semantic-release": "^16.0.0-beta.18",
+    "semantic-release-cli": "^5.0.0",
+    "all-contributors-cli": "^6.7.0",
+    "coveralls": "^3.0.4",
+    "jest": "^24.8.0",
+    "jest-stare": "^1.16.0",
+    "npm-check": "^5.9.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.2"
+  }
+}
